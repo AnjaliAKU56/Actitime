@@ -1,5 +1,8 @@
 package com.actiTime.testscript;
 
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -20,7 +23,7 @@ public class CustomerModule extends BaseClass {
          Thread.sleep(4000);
          Assert.fail();*/
 @Test
-    public void testCreateCustomer() {
+    public void testCreateCustomer() throws InterruptedException, EncryptedDocumentException, IOException {
 	Reporter.log("Create Customer",true);
 	FileLib f=new FileLib();
 	String expCustomerName=f.getExcelData("CreateCustomer",1,3);
@@ -45,6 +48,6 @@ public class CustomerModule extends BaseClass {
 	t.getCreateCustomerBtn().click();
 	Thread.sleep(3000);
 	String actualCustomer=t.getActualCustomerName().getText();
-	Assert.assertEquals(actualCustomer,expCustomerName);*/
+	Assert.assertEquals(actualCustomer,expCustomerName);
 	}
 }
