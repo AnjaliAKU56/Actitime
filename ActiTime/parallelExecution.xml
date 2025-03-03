@@ -1,0 +1,18 @@
+<suite name="Suite" parallel="tests">
+<parameter name="url" value="http://localhost/login.do"/>
+  <test thread-count="5" name="TestA">
+ 
+  <parameter name="un" value="admin"/>
+  <parameter name="pwd" value="manager"/>
+    <classes>
+      <class name="com.actiTime.testscript.DistributedParallel"/>
+    </classes>
+  </test> 
+  <test thread-count="5" name="TestB">
+  <parameter name="un" value="sbns"/>
+  <parameter name="pwd" value="manager"/>
+    <classes>
+      <class name="com.actiTime.testscript.DistributedParallel"/>
+    </classes>
+  </test><!-- Test -->
+</suite> <!-- Suite -->

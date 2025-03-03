@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+<parameter name="url" value=""/>
+  <test thread-count="5" name="TestA">
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.actiTime.testscript.CrossBrowser"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="TestB">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.actiTime.testscript.CrossBrowser"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
