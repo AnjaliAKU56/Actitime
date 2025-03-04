@@ -18,10 +18,6 @@ import com.actiTime.pom.TaskListPage;
 
 public class CustomerModule extends BaseClass {
 	    
-	/*
-        public void sample () throws InterruptedException{
-         Thread.sleep(4000);
-         Assert.fail();*/
 @Test
     public void testCreateCustomer() throws InterruptedException, EncryptedDocumentException, IOException {
 	Reporter.log("Create Customer",true);
